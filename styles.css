@@ -1,6 +1,8 @@
-*{
-    font-family: 'Open Sans', sans-serif;
+* {
+font-family: 'Open Sans', sans-serif;
 }
+
+/* Main Layout */
 
 body {
 width: 100%;
@@ -8,8 +10,6 @@ height: 100vh;
 display: grid;
 grid-template-columns: repeat(2, 1fr);
 grid-template-rows: .5fr repeat(3, 1fr) .7fr;
-grid-column-gap: 0px;
-grid-row-gap: 0px;
 }  
 
 nav {
@@ -26,8 +26,7 @@ header {
     grid-column: 1/3;
     grid-row: 2/3;
     background: #EBF4FF;
-    padding-left:16%;
-    line-height: 1cm;
+    padding: 0 15% 0 15%;
 }
 
 .sectionOne {
@@ -35,8 +34,8 @@ header {
     grid-row: 3/4;
     display: flex;
     flex-direction: row;
-    padding: 5% 10% 5% 10%;
-    justify-content: space-evenly;
+    padding: 5% 15% 5% 15%;
+    justify-content: space-between;
 }
 
 .sectionTwo {
@@ -44,8 +43,8 @@ header {
     grid-row: 4/5;
     display: flex;
     flex-direction: row;
-    padding: 5% 10% 5% 10%;
-    justify-content: space-evenly;
+    padding: 5% 15% 5% 15%;
+    justify-content: space-between;
 }
 
 
@@ -59,9 +58,6 @@ footer {
     flex-direction: column;
     justify-content: center;
     padding: 5%;
-    text-align: center;
-    letter-spacing: 2px;
-    font-size: 2rem;
 }
 
 .logo {
@@ -69,18 +65,47 @@ footer {
     height: 160px;
 }
 
+/* Main Content */
+
+.sectionImg {
+    width: 30vw;
+    background: transparent;
+    filter: drop-shadow(3px 6px 15px #00000036);
+    -webkit-filter: drop-shadow(3px 6px 15px #00000036);
+}
+
+.contentCopy {
+    width:500px;
+}
+
+.missionStatement {
+    font-size: 1.7rem;
+    max-width: 700px;
+    padding-bottom: 10%;
+    font-weight: normal;
+}
+
+.img1 {
+padding-left: 5%;
+}
+
+.img2 {
+padding-right: 10%
+}
+
+/* Buttons */
+
 .contactBtn {
     margin: auto;
-    width: 327px;
-    height: 71px;
+    width: 300px;
+    height: 60px;
     color: white;
     background-color: #354cb3;
     border: 3px solid white;
     border-radius: 36px;
-    padding: 10px 20px;
     text-align: center;
-    font-weight: bolder;
-    font-size: 18px;
+    font-size: 25px;
+    font-weight: bold;
 }
 
 .contactBtn:hover {
@@ -90,52 +115,127 @@ footer {
 }
 
 .demoBtn {
-width: 327px;
-height: 71px;
-background: #2979EC;
-border-radius: 36px;
-border: none;
-color: white;
-font: normal normal bold 25px/34px Open Sans;
+    width: 300px;
+    height: 60px;
+    background: #2979EC;
+    border-radius: 36px;
+    border: none;
+    color: white;
+    font-size: 25px;
+    font-weight: bold;
 }
 
 .demoBtn:hover {
      background: white;
      color: #2979EC;
      border: 3px solid #2979EC;
-
 }
 
-.sectionImg {
-    width: 30vw;
-    min-width: 300px;
-    background: transparent ;
-}
+/* Font Sizing */
 
-.contentCopy {
-    width: 30vw;
-    min-width: 300px;
-}
-
-.missionStatement {
-    font-size: 1.7rem;
-    max-width: 700px;
-    padding-bottom: 10%;
+h1 h2 h4 {
+    font-weight: normal
 }
 
 h1 {
     font-size: 4rem;
-}
-
-h1 .bold {
-    padding-top: -20px;
+    padding-top: -29px;
 }
 
 h3 {
-    font-size: 2em;
+    font-size: 2rem;
+    font-weight: bold;
 }
 
 h2 {
-    font-size: 2.3rem;
+    font-size: 1.3rem;
 }
 
+h4 {
+    font-size: 2rem;
+}
+
+p {
+    font-size: 1.2rem;
+    margin-top: 5%;
+}
+
+/* Mobile and Tablet */
+
+@media only screen and (max-width: 700px) {
+
+body {
+    grid-template-columns: 1fr;
+    grid-template-rows: .5fr repeat(3, 1fr) .7fr;
+}
+
+nav {
+    grid-column: 1/2;
+    grid-row: 1/2;
+}
+
+header {
+    grid-column: 1/2;
+    grid-row: 2/3;
+}
+
+.sectionOne {
+    grid-column: 1/2;
+    grid-row: 3/4;
+    flex-direction: column-reverse;
+}
+
+.sectionTwo {
+    grid-column: 1/2;
+    grid-row: 4/5;
+    flex-direction: column;
+}
+
+
+footer {
+    grid-column: 1/2;
+    grid-row: 5/6;
+}
+
+.sectionImg {
+    width:100%;
+    padding-bottom: 10%;
+}
+
+.contentCopy {
+   width: 350px
+}
+
+.missionStatement {
+    font-size: 1rem;
+}
+
+h1 {
+    font-size: 3rem;
+}
+
+h3 {
+    font-size: 1.5rem;
+}
+
+h4 {
+    font-size: 1.2rem;
+}
+
+p {
+    font-size: 1rem;
+}
+
+.demoBtn {
+    width: 200px;
+    height: 40px;
+    font-size: 15px;
+}
+
+.contactBtn {
+    width: 200px;
+    height: 40px;
+    font-size: 15px;
+}
+
+}
