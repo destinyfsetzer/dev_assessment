@@ -2,6 +2,6 @@
 Web Developer Assessment for EBQ
 
 
-##Thank You
+#Thank You
 
-# Don't forget to click the demo button
+## Don't forget to click the demo button
