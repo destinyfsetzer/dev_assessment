@@ -47,7 +47,6 @@ header {
     justify-content: space-between;
 }
 
-
 footer {
     grid-column: 1/3;
     grid-row: 5/6;
@@ -69,6 +68,7 @@ footer {
 
 .sectionImg {
     width: 30vw;
+    object-fit: scale-down;
     background: transparent;
     filter: drop-shadow(3px 6px 15px #00000036);
     -webkit-filter: drop-shadow(3px 6px 15px #00000036);
@@ -138,8 +138,12 @@ h1 h2 h4 {
 }
 
 h1 {
-    font-size: 4rem;
+    font-size: 5rem;
     padding-top: -29px;
+}
+
+.bold {
+    font-weight: 600;
 }
 
 h3 {
@@ -162,25 +166,25 @@ p {
 
 /* The Modal (background) */
 .modal {
-  display: none; /* Hidden by default */
-  position: fixed; /* Stay in place */
-  z-index: 1; /* Sit on top */
+  display: none;
+  position: fixed; 
+  z-index: 1; 
   left: 0;
   top: 0;
-  width: 100%; /* Full width */
-  height: 100%; /* Full height */
-  overflow: auto; /* Enable scroll if needed */
-  background-color: rgb(0,0,0); /* Fallback color */
+  width: 100%; 
+  height: 100%; 
+  overflow: auto;
+  background-color: rgb(0,0,0); 
   background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
 }
 
 /* Modal Content/Box */
 .modal-content {
   background-color: #EBF4FF;
-  margin: 10% auto; /* 15% from the top and centered */
+  margin: 10% auto; 
   padding: 20px;
   border: 1px solid #888;
-  width: 80%; /* Could be more or less, depending on screen size */
+  width: 80%; 
 }
 
 /* The Close Button */
@@ -206,6 +210,7 @@ p {
 }
 
 /* Mobile and Tablet */
+
 @media only screen and (max-width: 900px) {
 
 body {
